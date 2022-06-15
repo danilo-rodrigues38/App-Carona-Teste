@@ -6,13 +6,27 @@
 
 <ion-content [fullscreen]="true">
   <div class="container">
-    
+    <div class="icon">
+      <img src="./../../assets/carro.svg" alt="Logo Carro">
+    </div>
+
+    <p>O que deseja ?</p>
+
+    <div class="container-botoes">
+      <ion-button expand="block" size="large" [color]="corBotaoCarona.pegar" (click)="trocar('pegar')">
+        Pegar carona
+      </ion-button>
+
+      <ion-button expand="block" size="large" [color]="corBotaoCarona.dar" (click)="trocar('dar')">
+        Dar carona
+      </ion-button>
+    </div>
   </div>
 </ion-content>
 
 <ion-footer>
   <ion-toolbar>
-    <ion-button class="botao-proceguir" expand="block" color="success">
+    <ion-button [disabled]="disabilitarProsseguir" class="botao-proceguir" expand="block" color="success">
       PROCEGUIR
     </ion-button>
   </ion-toolbar>
