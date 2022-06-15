@@ -7,6 +7,21 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  public disabilitarProsseguir = true;
+
+  public corBotaoCarona = {
+    pegar: 'primary',
+    dar: 'primary'
+  };
+
   constructor() {}
 
+  public trocar(botao) {
+    this.disabilitarProsseguir = false;
+
+    this.corBotaoCarona.pegar = 'primary';
+    this.corBotaoCarona.dar = 'primary';
+
+    this.corBotaoCarona[botao] = 'success';
+  }
 }
